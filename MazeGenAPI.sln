@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazeGenAPI", "MazeGenAPI\MazeGenAPI.csproj", "{7A1A469C-E1EB-4702-944A-E292C495680D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeGenAPI.Algorithms", "MazeGenAPI.Algorithms\MazeGenAPI.Algorithms.csproj", "{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1A469C-E1EB-4702-944A-E292C495680D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1A469C-E1EB-4702-944A-E292C495680D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1A469C-E1EB-4702-944A-E292C495680D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1A469C-E1EB-4702-944A-E292C495680D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {424EAD61-BDE2-4899-8CBE-450A2C86D96A}
+	EndGlobalSection
+EndGlobal
