@@ -4,11 +4,11 @@
     {
         public char[][] GenerateMaze(uint width, uint height, char startSymbol, char endSymbol, char wallSymbol, char floorSymbol)
         {
-            Random random = new Random();
+            Random random = new();
             char[][] result = new char[height][];
             bool[,] seen = new bool[height, width];
             (int, int)[,] previous = new (int, int)[height, width];
-            Stack<(int, int)> stack = new Stack<(int, int)>();
+            Stack<(int, int)> stack = new();
 
             (int, int) start = (random.Next(0, checked((int)height)), 0);
             (int, int) end = (random.Next(0, checked((int)height)), checked((int)width) - 1);
@@ -66,7 +66,7 @@
                 result[x][y] = floorSymbol;
 
                 // list of positions to add to the stack
-                List<(int, int)> toStack = new List<(int, int)>(4);
+                List<(int, int)> toStack = new(4);
 
                 if (x + 1 < height && !seen[x + 1, y])
                 {
