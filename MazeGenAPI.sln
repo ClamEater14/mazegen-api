@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazeGenAPI", "MazeGenAPI\MazeGenAPI.csproj", "{7A1A469C-E1EB-4702-944A-E292C495680D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazeGenAPI.Generators", "MazeGenAPI.Algorithms\MazeGenAPI.Generators.csproj", "{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazeGenAPI.Generators", "MazeGenAPI.Generators\MazeGenAPI.Generators.csproj", "{56BB27F1-6B1F-46C8-9BD4-A97239CEE402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,7 +9,6 @@ namespace MazeGenAPI.Generators
     public enum Algorithm
     {
         Prim,
-        Kruskal,
         DepthFirstSearch,
     }
 
@@ -20,7 +19,6 @@ namespace MazeGenAPI.Generators
             return algorithmType switch
             {
                 Algorithm.Prim => new PrimsAlgorithm(),
-                Algorithm.Kruskal => new KruskalsAlgorithm(),
                 Algorithm.DepthFirstSearch => new DFSAlgorithm(),
                 _ => throw new ArgumentException("algorithm not found!"),
             };
