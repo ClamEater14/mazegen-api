@@ -5,8 +5,8 @@ namespace MazeGenAPI.Models
     public class Maze
     {
         public IEnumerable<string> Contents { get; }
-        public uint NumRoomsX { get; }
-        public uint NumRoomsY { get; }
+        public uint CorridorsX { get; }
+        public uint CorridorsY { get; }
         public Algorithm Algorithm { get; }
         public char StartSymbol { get; }
         public char EndSymbol { get; }
@@ -21,8 +21,8 @@ namespace MazeGenAPI.Models
                     char wallSymbol,
                     char floorSymbol)
         {
-            NumRoomsX = corridorsX;
-            NumRoomsY = corridorsY;
+            CorridorsX = corridorsX;
+            CorridorsY = corridorsY;
             Algorithm = algorithm;
             StartSymbol = startSymbol;
             EndSymbol = endSymbol;

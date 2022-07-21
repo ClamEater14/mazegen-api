@@ -37,8 +37,24 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+app.UseCors();
+
 // Configure the HTTP request pipeline.
-app.UseSwagger();
+app.UseSwagger(c =>
+{
+    c.PreSerializeFilters.Add((swagger, httpReq) =>
+    {
+        swagger.Servers = new List<OpenApiServer>
+        {
+            new OpenApiServer
+            {
+                Url = $"{httpReq.Scheme}://{httpReq.Host.Value}",
+                Description = app.Environment.IsDevelopment() ? "Development Server" : "Main Server"
+            }
+        };
+    });
+});
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "MazeGen API V1");
@@ -48,8 +64,6 @@ app.UseSwaggerUI(c =>
 app.UseHealthChecks("/health");
 
 app.UseHttpsRedirection();
-
-app.UseCors();
 
 app.UseAuthorization();
 
