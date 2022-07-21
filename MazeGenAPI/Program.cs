@@ -14,6 +14,7 @@ builder.Services.AddCors(options =>
          .AllowAnyHeader();
     });
 });
+builder.Services.AddHealthChecks();
 builder.Services.AddControllersWithViews()
                 .AddJsonOptions(options =>
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
@@ -44,9 +45,7 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-app.UseDefaultFiles();
-
-app.UseStaticFiles();
+app.UseHealthChecks("/health");
 
 app.UseHttpsRedirection();
 
