@@ -23,14 +23,24 @@ namespace MazeGenAPI.Controllers
         /// <param name="floorSymbol">The symbol indicating a walkable cell (optional), defaulting to a space</param>
         /// <returns>A `Maze` object containing the maze's properties and contents</returns>
         [HttpGet]
-        public Maze Generate(uint corridorsX = 10,
-                             uint corridorsY = 10,
-                             Algorithm algorithm = Algorithm.Prim,
-                             char startSymbol = 'O',
-                             char endSymbol = 'X',
-                             char wallSymbol = '#',
-                             char? floorSymbol = null)
+        public ActionResult<Maze> Generate(uint corridorsX = 10,
+                                           uint corridorsY = 10,
+                                           Algorithm algorithm = Algorithm.Prim,
+                                           char startSymbol = 'O',
+                                           char endSymbol = 'X',
+                                           char wallSymbol = '#',
+                                           char? floorSymbol = null)
         {
+            if (corridorsX <= 0)
+            {
+                return BadRequest("corridorsX must be 1 or larger.");
+            }
+
+            if (corridorsY <= 0)
+            {
+                return BadRequest("corridorsY must be 1 or larger.");
+            }
+
             return new Maze(corridorsX,
                             corridorsY,
                             algorithm,
