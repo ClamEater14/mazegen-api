@@ -14,13 +14,100 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 
 [`https://genservice.azure-api.net/mazes/api/maze`](https://genservice.azure-api.net/mazes/api/maze)
 
+```json
+{
+  "contents": [
+    "         #   # #   # ",
+    "#### ####### # # ### ",
+    " #   # # #   #   #   ",
+    " ### # # ### # ##### ",
+    "       # #   #   # # ",
+    "## # ### ### ### # # ",
+    "   #   #     # # # # ",
+    " ### ##### ### # # # ",
+    " #     #     #       ",
+    " # # ####### ### # ##",
+    " # #   # #       #   ",
+    "###### # ### # ### ##",
+    "     #   #   #   #   ",
+    "#### # ### # ### # # ",
+    "O# #       # #   # # ",
+    " # ### ##### ##### ##",
+    "   #   #     #      X",
+    " # # ##### ### # # # ",
+    " #     #   #   # # # ",
+    "## # ##### # ##### # ",
+    "   # #     # #     # "
+  ],
+  "corridorsX": 10,
+  "corridorsY": 10,
+  "algorithm": "Prim",
+  "startSymbol": "O",
+  "endSymbol": "X",
+  "wallSymbol": "#",
+  "floorSymbol": " "
+}
+```
+
 ### A maze with a set size
 
 [`https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5)
 
+```json
+{
+  "contents": [
+    "###########",
+    "           ",
+    "###### ####",
+    "O        # ",
+    "###### ### ",
+    "           ",
+    "#### ### #X",
+    " #   #   # ",
+    " # # # # ##",
+    "   # # #   ",
+    "###########"
+  ],
+  "corridorsX": 5,
+  "corridorsY": 5,
+  "algorithm": "Prim",
+  "startSymbol": "O",
+  "endSymbol": "X",
+  "wallSymbol": "#",
+  "floorSymbol": " "
+}
+```
+
 ### A maze with custom symbols
 
-[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=10&corridorsY=10&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=10&corridorsY=10&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.)
+[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=19&corridorsY=6&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=19&corridorsY=6&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.)
+
+```json
+{
+  "contents": [
+    ".%...........%...%.%...%...%.%.....%..G",
+    ".%%%.%%%%%%%%%%%.%.%.%%%%%.%.%%%.%%%.%%",
+    "...%...%.%.%...%...%...........%.......",
+    ".%%%%%.%.%.%.%%%.%.%.%%%.%%%%%.%.%%%%%%",
+    "...%.....%.......%...%.%.....%.........",
+    ".%%%%%.%%%.%.%%%.%%%.%.%%%%%.%%%.%.%%%%",
+    "S%...%.%.%.%...%...%.......%...%.%...%.",
+    ".%%%.%.%.%.%%%%%%%.%%%.%.%%%.%%%%%%%%%.",
+    ".%.........%.%...%...%.%.%.............",
+    ".%%%%%.%%%%%.%.%%%.%%%%%.%%%%%.%%%%%%%%",
+    ".%.............%.%.....%.%.......%.....",
+    ".%.%.%%%.%%%%%.%.%.%.%.%%%%%%%%%.%.%.%%",
+    "...%...%.....%...%.%.%.....%.......%..."
+  ],
+  "corridorsX": 19,
+  "corridorsY": 6,
+  "algorithm": "Prim",
+  "startSymbol": "S",
+  "endSymbol": "G",
+  "wallSymbol": "%",
+  "floorSymbol": "."
+}
+```
 
 ---
 
