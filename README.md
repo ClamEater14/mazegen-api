@@ -1,4 +1,43 @@
 # mazegen-api
- MazeGen is an API to generate mazes on a grid of ASCII characters!
 
-**Try it here:** https://mazegenapi.azurewebsites.net/
+MazeGen is an API to generate mazes on a grid of ASCII characters! The backend is hosted in Azure App Service and the API itself is managed by Azure API Management.
+
+**Note: URLs must be encoded in order for the API to work as intended.**
+
+**Try it here:** https://genservice.azure-api.net/mazes/api/maze
+
+---
+
+## Examples
+
+### A maze using default settings
+
+[`https://genservice.azure-api.net/mazes/api/maze`](https://genservice.azure-api.net/mazes/api/maze)
+
+### A maze with a set size
+
+[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5)
+
+### A maze with custom symbols
+
+[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=10&corridorsY=10&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=10&corridorsY=10&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.)
+
+---
+
+## Usage
+
+**URL:** https://genservice.azure-api.net/mazes
+
+**Endpoint:** `GET /api/maze`
+
+**Parameters:**
+
+| Endpoint      | Description                                                                                                         | Default Value  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `corridorsX`  | Sets the width of the maze. The number of characters for the length is equal to `2 * corridorsX + 1`. (Minimum: 1)  | 10             |
+| `corridorsY`  | Sets the height of the maze. The number of characters for the length is equal to `2 * corridorsY + 1`. (Minimum: 1) | 10             |
+| `algorithm`   | Sets the generation algorithm. Available algorithms: `Prim`, `DepthFirstSearch`                                     | `Prim`         |
+| `startSymbol` | Sets the symbol representing the starting point of the maze.                                                        | `O`            |
+| `endSymbol`   | Sets the symbol representing the goal of the maze.                                                                  | `X`            |
+| `wallSymbol`  | Sets the symbol representing a wall.                                                                                | `#`            |
+| `floorSymbol` | Sets the symbol representing the starting point of the maze. (Optional)                                             | `null` (Space) |
