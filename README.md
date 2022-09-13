@@ -4,7 +4,7 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 
 **Note: URLs must be encoded in order for the API to work as intended.**
 
-**Try it here:** https://genservice.azure-api.net/mazes/api/maze
+### The hosted API is currently down. You can clone this repo and open the `.sln` file in Visual Studio to test it locally.
 
 ---
 
@@ -12,7 +12,7 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 
 ### A maze using default settings
 
-[`https://genservice.azure-api.net/mazes/api/maze`](https://genservice.azure-api.net/mazes/api/maze)
+`/api/maze`
 
 ```json
 {
@@ -51,7 +51,7 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 
 ### A maze with a set size
 
-[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=5&corridorsY=5)
+`/api/maze?corridorsX=5&corridorsY=5`
 
 ```json
 {
@@ -80,7 +80,7 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 
 ### A maze with custom symbols
 
-[`https://genservice.azure-api.net/mazes/api/maze?corridorsX=19&corridorsY=6&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.`](https://genservice.azure-api.net/mazes/api/maze?corridorsX=19&corridorsY=6&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.)
+`/api/maze?corridorsX=19&corridorsY=6&algorithm=Prim&startSymbol=S&endSymbol=G&wallSymbol=%25&floorSymbol=.`
 
 ```json
 {
@@ -112,8 +112,6 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 ---
 
 ## Usage
-
-**URL:** https://genservice.azure-api.net/mazes
 
 **Endpoint:** `GET /api/maze`
 
