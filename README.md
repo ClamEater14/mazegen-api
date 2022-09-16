@@ -127,4 +127,4 @@ MazeGen is an API to generate mazes on a grid of ASCII characters! The backend i
 | `startSymbol` | Sets the symbol representing the starting point of the maze.                                                        | `O`            |
 | `endSymbol`   | Sets the symbol representing the goal of the maze.                                                                  | `X`            |
 | `wallSymbol`  | Sets the symbol representing a wall.                                                                                | `#`            |
-| `floorSymbol` | Sets the symbol representing the starting point of the maze. (Optional)                                             | `null` (Space) |
+| `floorSymbol` | Sets the symbol representing a walkable cell (floor). (Optional)                                                    | `null` (Space) |
